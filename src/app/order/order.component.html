@@ -1,0 +1,36 @@
+  <table class="table">
+    <caption><h2>List of Orders Made</h2></caption>
+    <tr>
+      <th>Order ID</th>
+      <th>Customer Alias</th>
+      <th>Pizza Name</th>
+      <th>Quantity</th>
+      <th>Total Pay</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let order of orderList">
+      <td>{{ order.orderID }}</td>
+      <td>{{ order.custAlias }}</td>
+      <td>{{ order.pizzaName }}</td>
+      <td>{{ order.orderQuantity }}</td>
+      <td>{{ order.totalPay }}</td>
+      <td>{{ order.status }}</td>
+      <td>
+        <button>Details</button>
+        &nbsp; | &nbsp;
+        <button>Approve</button>
+      </td>
+    </tr>
+  </table>
+  <br><br>
+  <div class="center">
+    <table>
+      <caption><h2>Order Details</h2></caption>
+      <tr>
+        <th>Name</th>
+        <th>Phone NO</th>
+        <th>Address</th>
+      </tr>
+    </table>
+  </div>

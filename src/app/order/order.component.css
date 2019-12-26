@@ -1,0 +1,43 @@
+input {
+    width: 100%;
+    padding: 2px 5px;
+    margin: 2px 0;
+    border: 2px solid red;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button, input[type=button]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 4px 7px;
+    text-decoration: none;
+    margin: 2px 1px;
+    cursor: pointer;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 4px solid #cc3300;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ffff99;
+  }
+  tr:nth-child(odd) {
+    background-color: #66ccff;
+  }
+  .center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #ff0000;
+    padding: 10px;
+    background-color: hsla(241, 100%, 70%, 0.692);
+}

@@ -1,0 +1,43 @@
+  <table class="table">
+    <caption><h2>List of Pizza Products</h2></caption>
+    <tr>
+      <th>Pizza ID</th>
+      <th>Pizza Name</th>
+      <th>Pizza Price</th>
+      <th>Pizza Stock</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let policy of policies">
+      <td>{{ policy.pizzaID }}</td>
+      <td>{{ policy.pizzaName }}</td>
+      <td>{{ policy.pizzaPrice }}</td>
+      <td>{{ policy.pizzaStock }}</td>
+      <td>
+        <button (click)="deletePolicy(policy.pizzaID)">Delete</button>
+        &nbsp; | &nbsp;
+        <button (click)="selectPolicy(policy)">Update</button>
+      </td>
+    </tr>
+  </table>
+  <br><br>
+<div class="center">
+  <form #f = "ngForm">
+    <label>Pizza ID</label>
+    <br>
+    <input type="text" name="pizzaID" [(ngModel)] = "selectedPolicy.pizzaID">
+    <br><br>
+    <label>Pizza Name</label>
+    <br>
+    <input type="text" name="pizzaName" [(ngModel)] = "selectedPolicy.pizzaName">
+    <br><br>
+    <label>Pizza Price</label>
+    <br>
+    <input type="text" name="pizzaPrice" [(ngModel)] = "selectedPolicy.pizzaPrice">
+    <br><br>
+    <label>Pizza Stock</label>
+    <br>
+    <input type="text" name="pizzaStock" [(ngModel)] = "selectedPolicy.pizzaStock">
+    <br><br>
+    <input type="button" (click)="createOrUpdatePolicy(f);" value="Create or Update Product">
+  </form>
+</div>
