@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+		<div class="alert alert-danger text-center" ng-show="error">
+			<button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+			<i class="fa fa-warning"></i> {{ message }}
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3 class="text-center">Register into Pizzitalia</h3>
+				<div class="form-group">
+					<label>Alias ID:</label>
+					<input type="text" class="form-control" ng-model="member.alias" placeholder="alias must be unique">
+				</div>
+				<div class="form-group">
+					<label>Password:</label>
+					<input type="text" class="form-control" ng-model="member.psw" placeholder="recommeded 8 length character">
+				</div>
+				<div class="form-group">
+					<label>Fullname:</label>
+					<input type="text" class="form-control" ng-model="member.fullname" placeholder="your fullname">
+				</div>
+				<div class="form-group">
+					<label>Mobile Phone Number:</label>
+					<input type="text" class="form-control" ng-model="member.phone" placeholder="without - symbol,eg. XXXXXXXXXX">
+				</div>
+				<div class="form-group">
+					<label>Full Address:</label>
+					<input type="text" class="form-control" ng-model="member.address" placeholder="your delivery address">
+				</div>
+				<button type="button" class="btn btn-primary" ng-click="add()"><i class="fa fa-save"></i> Save</button>
+				<button type="button" class="btn btn-default pull-right" ui-sref="home"><i class="fa fa-arrow-left"></i> Back</button>
+			</div>
+		</div>
+	</div>
+</div>

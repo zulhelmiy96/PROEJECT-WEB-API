@@ -1,0 +1,36 @@
+<div class="row" ng-init="fetch()">
+	<div class="col-md-8 col-md-offset-2">
+		<button type="button" class="btn btn-default pull-left" ui-sref="home"><i class="fa fa-arrow-left"></i> Back</button>
+		<table class="table table-bordered table-striped" style="margin-top:10px;">
+			<h3 class="page-header text-center">Chart Order</h3>
+			<thead>
+				<tr>
+					<th>Remove</th>
+					<th>Order ID</th>   
+					<th>Customer Alias</th>
+					<th>Pizza Name</th>
+					<th>Order Quantity</th>
+					<th>Total Pay</th>
+					<th>Status</th>
+					<th style="text-align:center">Action</th>
+                </tr>
+            </thead>
+			<tbody>
+				<tr ng-repeat="member in members">
+					<td style="text-align:center">
+						<button type="button" class="btn btn-danger" ui-sref="delete({member: member})"> <i class="fa fa-trash"></i></button>
+					</td>
+					<td>{{ member.orderID }}</td>
+					<td>{{ member.custAlias }}</td>
+					<td>{{ member.pizzaName }}</td>
+					<td>{{ member.quantity }}</td>
+					<td>{{ 'RM ' + member.totalPay }}</td>
+					<td>{{ member.status }}</td>
+					<td style="text-align:center">
+						<button type="button" class="btn btn-primary" ui-sref="order({member: member})"> <i class="fa fa-edit"></i> Place Order</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>	
+	</div>
+</div>

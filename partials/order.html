@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+		<div class="alert alert-danger text-center" ng-show="error">
+			<button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+			<i class="fa fa-warning"></i> {{ message }}
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h4 class="text-center">Verify Your Identity</h4>
+                <h3 class="text-center">{{'Alias ID: ' + orderList.custAlias + ' ---- Order ID: ' + orderList.orderID }}</h3><br>
+                <div class="form-group">
+					<label>Password:</label>
+					<input type="password" class="form-control" ng-model="orderList.psw" placeholder="insert your password">
+				</div>
+				<button type="button" class="btn btn-success" ng-click="order()"><i class="fa fa-home"></i> Verify</button>
+				<button type="button" class="btn btn-default pull-right" ui-sref="chart"><i class="fa fa-arrow-left"></i> Back</button>
+			</div>
+		</div>
+	</div>
+</div>

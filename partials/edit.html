@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-4">
+		<div class="alert alert-danger text-center" ng-show="error">
+			<button type="button" class="close" ng-click="clear()"><span aria-hidden="true">&times;</span></button>
+			<i class="fa fa-warning"></i> {{ message }}
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h3 class="text-center">Fill Your Order</h3>
+				<div class="form-group">
+					<label>Order Quantity:</label>
+					<input type="text" class="form-control" ng-model="updatedmember.quantity" placeholder="how many you want?">
+				</div>
+				<div class="form-group">
+					<label>Alias ID:</label>
+					<input type="text" class="form-control" ng-model="updatedmember.alias" placeholder="whos's order this?">
+				</div>
+				<button type="button" class="btn btn-success" ng-click="update()"><i class="fa fa-check-square-o"></i> Insert</button>
+				<button type="button" class="btn btn-default pull-right" ui-sref="home"><i class="fa fa-arrow-left"></i> Back</button>
+			</div>
+		</div>
+	</div>
+</div>

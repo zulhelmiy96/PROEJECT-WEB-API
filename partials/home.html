@@ -1,0 +1,30 @@
+<div class="row" ng-init="fetch()">
+	<div class="col-md-8 col-md-offset-2">
+		<table class="table table-bordered table-striped" style="margin-top:10px;">
+			<button class="btn btn-primary" ui-sref="add"><i class="fa fa-plus"></i> Register</button>
+			&nbsp
+			<button href="" class="btn btn-success" ui-sref="chart"><i class="fa fa-edit"></i> See Chart</button>
+			<h3 class="page-header text-center">List of Pizza Menus</h3>
+			<thead>
+				<tr>
+					<th>Pizza ID</th>   
+					<th>Pizza Name</th>
+                    <th>Pizza Price (RM)</th>
+					<th>Pizza Stock</th>
+					<th>Action</th>
+                </tr>
+            </thead>
+			<tbody>
+				<tr ng-repeat="member in members">
+					<td>{{ member.pizzaID }}</td>
+					<td>{{ member.pizzaName }}</td>
+					<td>{{ member.pizzaPrice }}</td>
+					<td>{{ member.pizzaStock }}</td>
+					<td style="text-align:center">
+						<button type="button" class="btn btn-success" ui-sref="edit({member: member})"><i class="fa fa-edit"></i> Add to Chart</button> 
+					</td>
+				</tr>
+			</tbody>
+		</table>	
+	</div>
+</div>
